@@ -1,97 +1,270 @@
 ---
-title: 'Quickstart'
-description: 'Start building awesome documentation in under 5 minutes'
+title: 快速開始
+description: "快速了解如何使用本手冊和開始你的 AI 設計之旅"
 ---
 
-## Setup your development
+## 歡迎使用 AI 視覺應用手冊！
 
-Learn how to update your docs locally and deploy them to the public.
+這份手冊將幫助你快速掌握各種 AI 設計工具，提升工作效率和創意產出。
 
-### Edit and preview
+<Note>
+**本手冊特色**
+
+從實際設計需求出發，提供可直接使用的範例和技巧，讓你學完就能用！
+</Note>
+
+## 三步開始使用
+
+<Steps>
+  <Step title="選擇你的起點">
+    根據你的經驗和需求選擇：
+    
+    <CardGroup cols={2}>
+      <Card title="完全新手" icon="seedling">
+        從 [基礎觀念](/introduction) 開始
+      </Card>
+      <Card title="有經驗者" icon="rocket">
+        直接跳到 [工具指南](/ai-tools/chatgpt/basics)
+      </Card>
+    </CardGroup>
+  </Step>
+  
+  <Step title="跟著案例實作">
+    選擇一個工具，跟著教學實際操作，邊做邊學
+  </Step>
+  
+  <Step title="應用到工作中">
+    將學到的技巧整合到你的日常工作流程
+  </Step>
+</Steps>
+
+## 推薦學習路徑
+
+### 路徑 1：初學者完整學習
 
 <AccordionGroup>
-  <Accordion icon="github" title="Clone your docs locally">
-    During the onboarding process, we created a repository on your Github with
-    your docs content. You can find this repository on our
-    [dashboard](https://dashboard.mintlify.com). To clone the repository
-    locally, follow these
-    [instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
-    in your terminal.
+  <Accordion title="第一週：建立基礎" icon="1">
+    1. 閱讀 [前言：如何把 AI 應用在設計中](/introduction)
+    2. 了解 [設計師為何需要 AI](/why-ai)
+    3. 學習 [如何挑選 AI 工具](/tool-selection)
+    4. 註冊 ChatGPT 帳號（建議升級 Plus）
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Preview changes">
-    Previewing helps you make sure your changes look as intended. We built a
-    command line interface to render these changes locally. 
-    1. Install the
-    [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the
-    documentation changes locally with this command: ``` npm i -g mintlify ```
-    2. Run the following command at the root of your documentation (where
-    `docs.json` is): ``` mintlify dev ```
-    <Note>
-      If you’re currently using the legacy ```mint.json``` configuration file, please update the Mintlify CLI:
-
-
-      ```npm i -g mintlify@latest```
-      And run the new upgrade command in your docs repository:
-
-      ```mintlify upgrade```
-      You should now be using the new ```docs.json``` configuration file. Feel free to delete the ```mint.json``` file from your repository.
-    </Note>
+  
+  <Accordion title="第二週：ChatGPT 圖片生成" icon="2">
+    1. 學習 [ChatGPT 基礎功能](/ai-tools/chatgpt/basics)
+    2. 探索 [設計師的 7 種應用](/ai-tools/chatgpt/use-cases)
+    3. 實作至少 3 個案例
+    4. 建立自己的提示詞資料庫
+  </Accordion>
+  
+  <Accordion title="第三週：擴展工具庫" icon="3">
+    1. 學習其他 AI 工具（Freepik、Photoshop AI 等）
+    2. 比較不同工具的優劣
+    3. 找到適合你工作流程的組合
+  </Accordion>
+  
+  <Accordion title="第四週：整合與優化" icon="4">
+    1. 將 AI 工具整合進日常工作
+    2. 優化你的工作流程
+    3. 記錄效率提升的成果
+    4. 持續探索新功能和技巧
   </Accordion>
 </AccordionGroup>
 
-### Deploy your changes
+### 路徑 2：特定需求快速查找
 
-<AccordionGroup>
+<Tabs>
+  <Tab title="社群媒體設計">
+    **需要快速產出社群貼文圖片？**
+    
+    1. [ChatGPT 社群內容應用](/ai-tools/chatgpt/use-cases#2-社群媒體內容快速產出)
+    2. [FLORA YouTube 封面生成](/ai-tools/flora/overview)
+    3. 實用案例：[貼圖生成](/ai-tools/chatgpt/practical-cases)
+  </Tab>
+  
+  <Tab title="產品設計">
+    **需要產品情境圖或包裝設計？**
+    
+    1. [ChatGPT 產品情境圖](/ai-tools/chatgpt/use-cases#3-產品情境圖生成)
+    2. [Flair AI 產品合成](/ai-tools/flair/overview)
+    3. [FLORA 背景生成](/ai-tools/flora/overview)
+  </Tab>
+  
+  <Tab title="修圖去背">
+    **需要快速修圖、去背、移除物件？**
+    
+    1. [Photoshop AI 功能](/ai-tools/photoshop/overview)
+    2. [Gemini 圖片編輯](/ai-tools/gemini/overview)
+    3. [Freepik 編輯工具](/ai-tools/freepik/overview)
+  </Tab>
+  
+  <Tab title="創意發想">
+    **需要靈感和創意方向？**
+    
+    1. [ChatGPT 創意探索](/ai-tools/chatgpt/use-cases#7-靈感收集與創意發想)
+    2. [即夢靈感參考](/ai-tools/jimeng/overview)
+    3. 創意案例集
+  </Tab>
+</Tabs>
 
-<Accordion icon="message-bot" title="Install our Github app">
-  Our Github app automatically deploys your changes to your docs site, so you
-  don't need to manage deployments yourself. You can find the link to install on
-  your [dashboard](https://dashboard.mintlify.com). Once the bot has been
-  successfully installed, there should be a check mark next to the commit hash
-  of the repo.
-</Accordion>
-<Accordion icon="rocket" title="Push your changes">
-  [Commit and push your changes to
-  Git](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository#about-git-push)
-  for your changes to update in your docs site. If you push and don't see that
-  the Github app successfully deployed your changes, you can also manually
-  update your docs through our [dashboard](https://dashboard.mintlify.com).
-</Accordion>
+## 必備工具清單
 
-</AccordionGroup>
+根據預算選擇你的工具組合：
 
-## Update your docs
+### 免費入門組合
 
-Add content directly in your files with MDX syntax and React components. You can use any of our components, or even build your own.
-
-<CardGroup>
-
-<Card title="Add Content With MDX" icon="file" href="/essentials/markdown">
-  Add content to your docs with MDX syntax.
-</Card>
-
-<Card
-  title="Add Code Blocks"
-  icon="square-code"
-  href="/essentials/code"
->
-  Add code directly to your docs with syntax highlighting.
-</Card>
-
-<Card
-  title="Add Images"
-  icon="image"
-  href="/essentials/images"
->
-  Add images to your docs to make them more engaging.
-</Card>
-
-<Card
-  title="Add Custom Components"
-  icon="puzzle-piece"
-  href="/essentials/reusable-snippets"
->
-  Add templates to your docs to make them more reusable.
-</Card>
-
+<CardGroup cols={3}>
+  <Card title="ChatGPT Free" icon="comment">
+    基礎圖片生成功能
+  </Card>
+  <Card title="Freepik Free" icon="images">
+    素材下載與基礎 AI
+  </Card>
+  <Card title="Photoshop 試用" icon="wand-magic-sparkles">
+    7 天完整功能試用
+  </Card>
 </CardGroup>
+
+### 專業付費組合
+
+<CardGroup cols={2}>
+  <Card title="ChatGPT Plus" icon="star">
+    **$20/月**
+    
+    無限圖片生成、完整編輯功能
+  </Card>
+  <Card title="Adobe Creative Cloud" icon="paintbrush">
+    **$9.99/月起**
+    
+    Photoshop + Lightroom（攝影方案）
+  </Card>
+  <Card title="Freepik Premium" icon="crown">
+    **$10/月**
+    
+    無限下載 + AI 工具
+  </Card>
+  <Card title="Midjourney" icon="image">
+    **$10/月起**
+    
+    高品質 AI 圖片生成（選配）
+  </Card>
+</CardGroup>
+
+## 實用資源
+
+<Tabs>
+  <Tab title="學習資源">
+    - 📚 [本手冊完整目錄](/purpose)
+    - 🎯 [實用案例集](/applications/cases/overview)
+    - 💡 [Prompt 資源庫](/resources/prompts)
+    - 🖼️ [AI 圖庫推薦](/resources/ai-libraries)
+  </Tab>
+  
+  <Tab title="社群與支援">
+    - 💬 Discord 社群（建設中）
+    - 📧 問題回饋：support@example.com
+    - 🐛 回報錯誤：GitHub Issues
+    - 📝 內容建議：歡迎提供
+  </Tab>
+  
+  <Tab title="保持更新">
+    - 🔔 訂閱電子報（建設中）
+    - 📱 追蹤社群媒體
+    - ⭐ GitHub Star 關注更新
+    - 📖 定期回訪查看新內容
+  </Tab>
+</Tabs>
+
+## 常見問題
+
+<AccordionGroup>
+  <Accordion title="我需要有設計背景嗎？" icon="question">
+    不需要！本手冊適合所有想使用 AI 提升視覺產出的人，包括：
+    - 設計師（平面、UI/UX、品牌）
+    - 行銷人員
+    - 社群媒體小編
+    - 創業者
+    - 內容創作者
+  </Accordion>
+  
+  <Accordion title="需要付費訂閱嗎？" icon="dollar-sign">
+    大部分工具都有免費版本可以開始使用。建議先用免費版熟悉，確認對工作有幫助後再考慮付費。
+    
+    專業使用建議至少訂閱 ChatGPT Plus（$20/月）。
+  </Accordion>
+  
+  <Accordion title="生成的圖片可以商用嗎？" icon="scale-balanced">
+    多數工具的付費版本允許商業使用，但：
+    - 務必詳讀各工具的使用條款
+    - 注意版權和授權範圍
+    - 避免生成侵權內容
+    - 重要專案建議再次確認
+  </Accordion>
+  
+  <Accordion title="AI 會取代設計師嗎？" icon="robot">
+    不會！AI 是工具，設計師是操作者。
+    
+    AI 擅長：快速產出、多樣變化、重複性工作
+    
+    設計師不可取代的價值：策略思維、創意指導、使用者洞察、專業判斷
+    
+    掌握 AI 的設計師 = 超級設計師 🦸
+  </Accordion>
+  
+  <Accordion title="更新頻率如何？" icon="clock">
+    AI 工具發展快速，我們會盡力保持內容更新。
+    
+    - 重大功能更新：即時新增
+    - 新工具評測：每月新增
+    - 案例補充：持續更新
+    - 介面變更：定期修正
+  </Accordion>
+</Tabs>
+
+## 開始你的 AI 設計之旅
+
+選擇一個起點，立即開始：
+
+<CardGroup cols={2}>
+  <Card
+    title="從觀念開始"
+    icon="book-open"
+    href="/introduction"
+  >
+    了解如何把 AI 應用在設計中
+  </Card>
+  
+  <Card
+    title="直接學工具"
+    icon="screwdriver-wrench"
+    href="/ai-tools/chatgpt/basics"
+  >
+    開始學習 ChatGPT 圖片生成
+  </Card>
+  
+  <Card
+    title="瀏覽案例"
+    icon="images"
+    href="/applications/cases/overview"
+  >
+    看看其他人怎麼用 AI
+  </Card>
+  
+  <Card
+    title="挑選工具"
+    icon="filter"
+    href="/tool-selection"
+  >
+    找到最適合你的 AI 工具
+  </Card>
+</CardGroup>
+
+<Tip>
+**學習建議**
+
+不要只是閱讀，一定要實際操作！邊做邊學才能真正掌握 AI 工具的使用技巧。
+</Tip>
+
+<Note>
+有任何問題或建議嗎？歡迎透過 GitHub Issues 或 Email 與我們聯繫！
+</Note>

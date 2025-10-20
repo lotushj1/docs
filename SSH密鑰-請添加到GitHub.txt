@@ -1,0 +1,28 @@
+🔑 您的 SSH 公鑰（已複製到剪貼板）
+===========================================
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIElV4BkzSthX9ybITpvKv2lHADI68kqy5wh//yNu3GoI lotushj1@users.noreply.github.com
+
+📝 添加步驟：
+===========================================
+
+1. 前往 GitHub SSH 設置頁面：
+   https://github.com/settings/keys
+
+2. 點擊右上角的 "New SSH key" 按鈕
+
+3. 填寫表單：
+   - Title（標題）: Mintlift AI 手冊
+   - Key type: Authentication Key
+   - Key（密鑰）: 直接按 Cmd+V 貼上（已複製到剪貼板）
+                  或複製上面的公鑰內容
+
+4. 點擊 "Add SSH key"
+
+5. 可能需要輸入您的 GitHub 密碼確認
+
+✅ 完成後回到終端機，運行：
+   git push origin main
+
+🎉 之後就可以使用 ./deploy.sh 快速部署了！
+
