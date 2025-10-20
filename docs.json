@@ -13,7 +13,23 @@
       {
         "tab": "AI 設計指南",
         "pages": [
-          "introduction"
+          "introduction",
+          "purpose",
+          "why-ai",
+          "tool-selection",
+          "graphic-design"
+        ]
+      },
+      {
+        "tab": "AI 工具指南",
+        "groups": [
+          {
+            "group": "ChatGPT 圖片生成",
+            "pages": [
+              "ai-tools/chatgpt/basics",
+              "ai-tools/chatgpt/use-cases"
+            ]
+          }
         ]
       }
     ],
