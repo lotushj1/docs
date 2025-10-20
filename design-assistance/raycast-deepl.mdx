@@ -1,0 +1,350 @@
+---
+title: 利用 Raycast+DeepL 達成快速翻譯的技巧
+description: "使用 Raycast 和 DeepL 打造最快速的翻譯工作流程"
+---
+
+## 快速翻譯技巧
+
+不知道大家平時如何使用翻譯的，是每次要翻譯都打開 Google 翻譯之類的工具或是現在使用 ChatGPT 之類的 AI 來翻譯呢？
+
+這次想分享的是比上面這二種方法都還快速，且品質很好的翻譯方法。
+
+<Note>
+**使用工具**
+
+Raycast 的 Deepcast（Mac 用戶專用）
+</Note>
+
+## 安裝與設定步驟
+
+<Steps>
+  <Step title="安裝 Raycast">
+    前往 [Raycast 官網](https://www.raycast.com/)下載並安裝
+    
+    Raycast 是 Mac 上強大的生產力工具，可以替代 Spotlight，提供更多實用功能。
+  </Step>
+
+  <Step title="安裝 Deepcast 擴充套件">
+    在 Raycast Store 搜尋並安裝 [Deepcast](https://www.raycast.com/mooxl/deepcast)
+    
+    這是 Raycast 的 DeepL 翻譯擴充套件。
+  </Step>
+
+  <Step title="註冊 DeepL 帳號">
+    前往 [DeepL Pro](https://www.deepl.com/pro) 註冊免費帳號
+    
+    <Tip>
+    DeepL 是網路評價非常好的翻譯工具，免費版每月提供 **50 萬字元**的翻譯額度，一般個人使用非常足夠。
+    </Tip>
+  </Step>
+
+  <Step title="登入並創建 API 密鑰">
+    登入後前往 [DeepL 帳號頁面](https://www.deepl.com/account/summary)
+    
+    在「API 密鑰」區域點選「創建密鑰」
+    
+    <Warning>
+    **重要提醒**
+    
+    - 記得妥善保管 API 密鑰，不要分享給他人
+    - 所有翻譯用量都會從你的帳號扣除
+    - 建議將密鑰儲存在安全的地方
+    </Warning>
+  </Step>
+
+  <Step title="設定 Raycast 擴充套件">
+    **設定 API 金鑰：**
+    
+    1. 打開 Raycast 的 Settings
+    2. 選擇「Extensions」
+    3. 找到「Deepcast」
+    4. 在右側的「API Key」欄位貼上你的 API 金鑰
+    
+    **設定翻譯語言與快捷鍵：**
+    
+    1. 選擇目標語言（例如：English (US)）
+    2. 設定快捷鍵（建議：`Cmd + E`）
+    
+    <Note>
+    快捷鍵可以自訂，建議選擇好記且不會與其他工具衝突的組合。
+    </Note>
+  </Step>
+
+  <Step title="開始使用">
+    設定完成後，在任何應用程式中：
+    
+    1. 選取要翻譯的文字
+    2. 按下設定的快捷鍵（例如：`Cmd + E`）
+    3. 翻譯結果會自動複製到剪貼簿
+    4. 直接貼上使用
+    
+    成功翻譯後會在畫面頂部顯示綠色通知訊息。
+  </Step>
+</Steps>
+
+## 實際應用場景
+
+<CardGroup cols={2}>
+  <Card title="圖庫搜尋" icon="images">
+    在圖庫輸入框輸入中文 → `Cmd + A` + `Cmd + E` → 完成翻譯並搜尋
+  </Card>
+  
+  <Card title="AI 圖片生成" icon="wand-magic-sparkles">
+    在提示詞輸入欄打中文 → `Cmd + A` + `Cmd + E` → 直接生成圖片
+  </Card>
+  
+  <Card title="設計軟體使用" icon="pen-ruler">
+    選取中文文字 → `Cmd + E` → 翻譯並複製 → 在任意位置貼上
+  </Card>
+  
+  <Card title="文件翻譯" icon="file-lines">
+    閱讀外文資料時，選取段落快速翻譯理解
+  </Card>
+</CardGroup>
+
+### 1. 圖庫搜尋應用
+
+當你在 Unsplash、Pexels 等圖庫網站搜尋素材時：
+
+```
+原本流程：
+1. 想搜尋「夕陽海邊」
+2. 打開翻譯工具
+3. 輸入「夕陽海邊」
+4. 複製翻譯結果 "sunset beach"
+5. 貼到圖庫搜尋框
+
+使用 Raycast + DeepL：
+1. 在圖庫搜尋框直接輸入「夕陽海邊」
+2. Cmd + A + Cmd + E
+3. 完成！立即搜尋
+```
+
+<Tip>
+**時間節省：從 30 秒縮短到 3 秒**
+</Tip>
+
+### 2. AI 圖片生成應用
+
+在使用 ChatGPT、Midjourney、Stable Diffusion 等工具時：
+
+```
+傳統方式：
+1. 想到創意「一隻戴墨鏡的貓在海邊度假」
+2. 手動翻譯成英文提示詞
+3. 複製貼上到 AI 工具
+
+使用 Raycast + DeepL：
+1. 直接在提示詞輸入框打中文
+2. Cmd + A + Cmd + E
+3. 直接生成！
+```
+
+<Note>
+**為什麼 AI 生成要用英文？**
+
+雖然現在很多 AI 工具支援中文，但英文提示詞通常能得到：
+- 更精確的結果
+- 更豐富的細節
+- 更好的風格控制
+</Note>
+
+### 3. 設計軟體應用
+
+在 Figma、Sketch、Adobe XD 等設計軟體中：
+
+```
+情境：需要在設計稿中加入英文文案
+
+傳統方式：
+1. 在文字工具中輸入中文
+2. 打開翻譯工具
+3. 翻譯後複製
+4. 回到設計軟體貼上
+
+使用 Raycast + DeepL：
+1. 在文字圖層直接打中文
+2. 選取後 Cmd + E
+3. 直接貼上替換
+```
+
+## 進階技巧
+
+<AccordionGroup>
+  <Accordion title="設定多種語言快捷鍵" icon="language">
+    如果你經常需要翻譯成不同語言，可以設定多組快捷鍵：
+    
+    - `Cmd + E`：翻譯成英文
+    - `Cmd + J`：翻譯成日文
+    - `Cmd + K`：翻譯成韓文
+    
+    在 Raycast Extensions 設定中，可以為同一個擴充套件設定多個指令。
+  </Accordion>
+
+  <Accordion title="與 Clipboard Manager 搭配" icon="clipboard">
+    安裝 Raycast 的剪貼簿管理器：
+    
+    1. 所有翻譯結果都會自動儲存在剪貼簿歷史
+    2. 可以快速回顧之前的翻譯
+    3. 需要時隨時取用
+  </Accordion>
+
+  <Accordion title="翻譯長文本" icon="file-lines">
+    DeepL 支援翻譯長文本，但要注意：
+    
+    - 免費版每月 50 萬字元額度
+    - 超過後需要升級付費方案
+    - 可以在 DeepL 帳號查看使用量
+  </Accordion>
+
+  <Accordion title="自訂翻譯方向" icon="arrows-left-right">
+    在 Deepcast 設定中可以：
+    
+    - 設定預設翻譯方向（中→英、英→中）
+    - 開啟自動偵測語言
+    - 保留原文格式
+  </Accordion>
+</AccordionGroup>
+
+## 效率對比
+
+| 使用情境 | 傳統方式 | Raycast + DeepL | 節省時間 |
+|---------|---------|-----------------|---------|
+| 單字/短句翻譯 | 15-30 秒 | 2-3 秒 | **90%** |
+| 圖庫搜尋 | 20-40 秒 | 3-5 秒 | **85%** |
+| AI 提示詞 | 30-60 秒 | 3-5 秒 | **90%** |
+| 設計文案翻譯 | 20-40 秒 | 5 秒 | **85%** |
+| 長文翻譯 | 1-2 分鐘 | 10-15 秒 | **85%** |
+
+## 為什麼選擇 DeepL？
+
+<CardGroup cols={2}>
+  <Card title="翻譯品質優秀" icon="star">
+    在多項測試中，DeepL 的翻譯品質優於 Google 翻譯，特別是在保留語境和自然度方面
+  </Card>
+  
+  <Card title="免費額度充足" icon="gift">
+    每月 50 萬字元對一般使用者非常足夠
+  </Card>
+  
+  <Card title="速度快" icon="bolt">
+    API 響應速度快，配合 Raycast 幾乎感覺不到延遲
+  </Card>
+  
+  <Card title="支援多種語言" icon="globe">
+    支援 31 種語言，涵蓋常用的各國語言
+  </Card>
+</CardGroup>
+
+## 常見問題
+
+<AccordionGroup>
+  <Accordion title="快捷鍵沒有反應？" icon="keyboard">
+    **可能原因：**
+    
+    1. 快捷鍵與其他應用衝突
+       - 檢查系統偏好設定中的快捷鍵
+       - 嘗試更換其他組合
+    
+    2. Raycast 沒有取得輔助功能權限
+       - 前往「系統偏好設定」→「隱私權與安全性」→「輔助功能」
+       - 確認 Raycast 已勾選
+    
+    3. 擴充套件未正確安裝
+       - 重新安裝 Deepcast 擴充套件
+  </Accordion>
+
+  <Accordion title="翻譯結果不準確？" icon="circle-question">
+    **改善方法：**
+    
+    1. 確保選取完整的句子或段落
+    2. 避免選取包含特殊符號或格式的文字
+    3. 如果是專業術語，可能需要手動調整
+    4. 考慮使用 ChatGPT 進行更專業的翻譯
+  </Accordion>
+
+  <Accordion title="API 額度用完了怎麼辦？" icon="battery-empty">
+    **解決方案：**
+    
+    1. 升級到 DeepL Pro 付費方案
+    2. 等待下個月額度重置
+    3. 短期內可使用其他翻譯工具
+    4. 在 DeepL 帳號中可查看使用量
+  </Accordion>
+
+  <Accordion title="Windows 用戶可以使用嗎？" icon="windows">
+    Raycast 目前僅支援 macOS。Windows 用戶可以考慮：
+    
+    - PowerToys（微軟官方工具）
+    - AutoHotkey（自動化腳本）
+    - DeepL 桌面應用程式
+    - 瀏覽器擴充套件
+  </Accordion>
+</AccordionGroup>
+
+## 其他推薦的 Raycast 擴充套件
+
+既然已經安裝了 Raycast，這裡推薦幾個設計師實用的擴充套件：
+
+<CardGroup cols={2}>
+  <Card title="Color Picker" icon="eye-dropper">
+    快速取色工具，比系統內建的更好用
+  </Card>
+  
+  <Card title="Emoji" icon="face-smile">
+    快速搜尋和插入 Emoji
+  </Card>
+  
+  <Card title="Clipboard History" icon="clipboard">
+    剪貼簿歷史記錄，找回之前複製的內容
+  </Card>
+  
+  <Card title="Window Management" icon="window-restore">
+    快速調整視窗大小和位置
+  </Card>
+  
+  <Card title="Lorem Ipsum" icon="paragraph">
+    快速生成假文，設計稿必備
+  </Card>
+  
+  <Card title="File Search" icon="magnifying-glass">
+    比 Spotlight 更快的檔案搜尋
+  </Card>
+</CardGroup>
+
+## 總結
+
+Raycast + DeepL 這個組合對於需要頻繁使用翻譯的設計師來說，是一個極大的效率提升工具。
+
+<Note>
+**核心優勢**
+
+- ⚡ **超快速度**：2-3 秒完成翻譯
+- 🎯 **精準品質**：DeepL 翻譯品質優秀
+- 🔄 **無縫整合**：在任何應用中都能使用
+- 💰 **免費充足**：每月 50 萬字元額度
+- 🎨 **設計友善**：特別適合圖庫搜尋和 AI 生成
+</Note>
+
+這個方法對於我這種英文苦手有非常大的幫助，強烈推薦給所有需要頻繁使用翻譯的設計師和創作者！
+
+## 延伸閱讀
+
+<CardGroup cols={2}>
+  <Card
+    title="ChatGPT 圖片辨識應用"
+    icon="image"
+    href="/design-assistance/chatgpt-image-recognition"
+  >
+    了解如何用 AI 分析圖片
+  </Card>
+  
+  <Card
+    title="AI 在平面設計中的應用"
+    icon="palette"
+    href="/graphic-design"
+  >
+    回到設計應用主題
+  </Card>
+</CardGroup>
+
