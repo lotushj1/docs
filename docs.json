@@ -39,6 +39,14 @@
                 "design-assistance/raycast-deepl",
                 "design-assistance/ai-image-recognition"
               ]
+            },
+            {
+              "tab": "相關資源推薦",
+              "pages": [
+                "resources/ai-stock-images",
+                "resources/prompt-resources",
+                "resources/prompt-tools"
+              ]
             }
            ],
     "global": {
