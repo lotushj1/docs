@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AI 視覺應用手冊",
+  "name": "AI 視覺應用實戰指南",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -57,7 +57,7 @@
     "links": [
       {
         "label": "聯絡我們",
-        "href": "mailto:support@example.com"
+        "href": "https://kevinlearn.com"
       }
     ]
   },
