@@ -1,0 +1,425 @@
+---
+title: 用 JSON 寫 GPT 圖片提示詞：新手也能秒上手
+description: "學習使用結構化的 JSON 格式來優化 ChatGPT 圖片生成提示詞"
+---
+
+## 為什麼要用 JSON？
+
+傳統的文字提示詞雖然直觀，但當你需要快速調整配色、光線、構圖等參數時，往往要重寫整個提示詞。JSON 格式的結構化提示詞可以讓你：
+
+<CardGroup cols={2}>
+  <Card title="快速迭代" icon="arrows-rotate">
+    只需修改特定參數，不用重寫整個提示詞
+  </Card>
+  <Card title="精確控制" icon="sliders">
+    每個元素都有明確的欄位，避免遺漏
+  </Card>
+  <Card title="團隊協作" icon="users">
+    不同角色可以修改不同欄位，互不衝突
+  </Card>
+  <Card title="批量產出" icon="copy">
+    換參數就能快速生成系列作品
+  </Card>
+</CardGroup>
+
+## 五大核心欄位一次搞懂
+
+JSON 提示詞的標準結構包含五個核心欄位：
+
+<AccordionGroup>
+  <Accordion title="prompt（主要描述）" icon="comment">
+    **用途**：描述圖片的主要內容和構圖
+    
+    ```json
+    "prompt": "一位穿著藍色斗篷的女騎士，手持銀色長劍，站在古老城堡前"
+    ```
+    
+    **重點**：要具體、生動，包含主體、動作、場景
+  </Accordion>
+  
+  <Accordion title="style（視覺風格）" icon="palette">
+    **用途**：定義整體的藝術風格和調性
+    
+    ```json
+    "style": "奇幻插畫風格，溫暖色調，精緻細節"
+    ```
+    
+    **重點**：風格要與 prompt 內容匹配
+  </Accordion>
+  
+  <Accordion title="parameters（可調參數）" icon="gear">
+    **用途**：存放需要頻繁調整的元素
+    
+    ```json
+    "parameters": {
+      "lighting": "溫暖的夕陽光線",
+      "color_scheme": "藍色和金色",
+      "composition": "三分法構圖",
+      "mood": "英勇而神秘"
+    }
+    ```
+    
+    **重點**：這裡放最容易變動的元素
+  </Accordion>
+  
+  <Accordion title="medium（媒介材質）" icon="image">
+    **用途**：指定圖片的最終呈現方式
+    
+    ```json
+    "medium": "數位插畫，高解析度"
+    ```
+    
+    **重點**：影響最終的質感和細節
+  </Accordion>
+  
+  <Accordion title="size（尺寸規格）" icon="expand">
+    **用途**：定義圖片的尺寸和比例
+    
+    ```json
+    "size": "16:9 橫向，適合網站橫幅"
+    ```
+    
+    **重點**：根據使用場景選擇合適比例
+  </Accordion>
+</AccordionGroup>
+
+## 超簡單範例：一鍵換色、換光線
+
+### 基礎模板
+
+```json
+{
+  "prompt": "一位優雅的女性，穿著白色長裙，站在花園中",
+  "style": "攝影寫實風格，柔和光線",
+  "parameters": {
+    "lighting": "自然光線",
+    "color_scheme": "白色和綠色",
+    "mood": "清新自然",
+    "background": "花園背景"
+  },
+  "medium": "高品質攝影",
+  "size": "4:3 直向"
+}
+```
+
+### 快速調整範例
+
+<Tabs>
+  <Tab title="換配色">
+    ```json
+    {
+      "prompt": "一位優雅的女性，穿著白色長裙，站在花園中",
+      "style": "攝影寫實風格，柔和光線",
+      "parameters": {
+        "lighting": "溫暖夕陽光線",
+        "color_scheme": "金色和橙色",
+        "mood": "浪漫溫馨",
+        "background": "夕陽花園背景"
+      },
+      "medium": "高品質攝影",
+      "size": "4:3 直向"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="換光線">
+    ```json
+    {
+      "prompt": "一位優雅的女性，穿著白色長裙，站在花園中",
+      "style": "攝影寫實風格，戲劇性光線",
+      "parameters": {
+        "lighting": "強烈側光",
+        "color_scheme": "白色和深綠色",
+        "mood": "神秘優雅",
+        "background": "陰暗花園背景"
+      },
+      "medium": "高品質攝影",
+      "size": "4:3 直向"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="換風格">
+    ```json
+    {
+      "prompt": "一位優雅的女性，穿著白色長裙，站在花園中",
+      "style": "水彩插畫風格，柔和筆觸",
+      "parameters": {
+        "lighting": "柔和自然光",
+        "color_scheme": "粉彩色調",
+        "mood": "夢幻浪漫",
+        "background": "水彩花園背景"
+      },
+      "medium": "水彩畫",
+      "size": "4:3 直向"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<Tip>
+**快速調整秘訣**
+
+只需要修改 `parameters` 中的特定欄位，其他部分保持不變，就能快速測試不同效果！
+</Tip>
+
+## 進階應用案例：遊戲角色介紹欄位
+
+### 完整 JSON 模板
+
+```json
+{
+  "prompt": "一位穿著藍色斗篷的女騎士，手持銀色長劍，站在古老城堡前",
+  "style": "奇幻插畫風格，精緻細節",
+  "parameters": {
+    "character_class": "聖騎士",
+    "weapon_type": "雙手劍",
+    "armor_style": "重裝甲",
+    "pose": "戰鬥姿態",
+    "lighting": "神聖光線",
+    "color_scheme": "藍色和銀色",
+    "background_style": "中世紀城堡",
+    "mood": "英勇而神聖",
+    "art_style": "概念藝術風格"
+  },
+  "medium": "數位插畫，4K 解析度",
+  "size": "16:9 橫向，適合遊戲宣傳"
+}
+```
+
+### 快速變化範例
+
+<Steps>
+  <Step title="換職業">
+    修改 `character_class`：聖騎士 → 法師 → 盜賊
+  </Step>
+  
+  <Step title="換武器">
+    修改 `weapon_type`：雙手劍 → 法杖 → 匕首
+  </Step>
+  
+  <Step title="換場景">
+    修改 `background_style`：城堡 → 森林 → 沙漠
+  </Step>
+  
+  <Step title="換風格">
+    修改 `art_style`：概念藝術 → 賽博龐克 → 蒸汽龐克
+  </Step>
+</Steps>
+
+<Note>
+**進階技巧**
+
+這個 JSON 模板可以快速生成不同職業、不同場景的遊戲角色，只需要修改 `parameters` 中的對應欄位即可。
+</Note>
+
+## 參考圖片 × JSON 同步應用
+
+### 結合使用流程
+
+<Steps>
+  <Step title="上傳參考圖片">
+    將想要轉換風格的照片上傳到 ChatGPT
+  </Step>
+  
+  <Step title="使用 JSON 模板">
+    套用預設的 JSON 結構化提示詞
+  </Step>
+  
+  <Step title="調整參數">
+    根據需求修改 `parameters` 中的特定欄位
+  </Step>
+  
+  <Step title="生成結果">
+    獲得風格轉換後的圖片
+  </Step>
+</Steps>
+
+### 實際應用範例
+
+**需求**：將人物照片轉換為不同風格的藝術作品
+
+```json
+{
+  "prompt": "基於上傳照片的人物，保持姿勢和構圖",
+  "style": "賽博龐克插畫風格，霓虹燈光效果",
+  "parameters": {
+    "character_style": "未來戰士裝扮",
+    "lighting": "霓虹燈光線",
+    "color_scheme": "藍色和紫色霓虹",
+    "background": "未來城市夜景",
+    "mood": "科技感與神秘感",
+    "art_style": "賽博龐克概念藝術"
+  },
+  "medium": "數位插畫，高解析度",
+  "size": "16:9 橫向"
+}
+```
+
+<Tip>
+**照片→風格轉換模板**
+
+這份 JSON 就是一個「**照片→風格轉換＋背景替換**」的即用模板；你只需要改 `parameters` 裡的風格和場景，就能把任何人物照片變成不同世界觀的專屬藝術作品。
+</Tip>
+
+## 還有哪些重點？
+
+### JSON 提示詞最佳實踐
+
+<AccordionGroup>
+  <Accordion title="欄位層級一致" icon="align-left">
+    **概念**：`prompt`、`style`、`parameters` 等應全在同一層；子欄位再往內縮排。
+    
+    **快速檢查方法**：觀察大括號 `{}` 是否對稱、縮排是否齊。
+  </Accordion>
+  
+  <Accordion title="中英文標點一致" icon="language">
+    **概念**：中文內容建議全形標點；英數與中文留半形空格，避免模型讀錯符號。
+    
+    **快速檢查方法**：Ctrl + F 搜尋半形逗號、句點混用。
+  </Accordion>
+  
+  <Accordion title="使用易讀變數名" icon="tag">
+    **概念**：`subject_type`、`bg_colors`… 越直白越好；別用 `x1`、`clrA` 等難以回憶的縮寫。
+    
+    **快速檢查方法**：「看變數可秒懂用途」為原則。
+  </Accordion>
+  
+  <Accordion title="數值單位一致" icon="ruler">
+    **概念**：角度統一用度數（°）、透明度用百分比等；避免有時用 0-1、有時用 0-100。
+    
+    **快速檢查方法**：在 `parameters` 加註單位，如 `15deg`、`80%`。
+  </Accordion>
+  
+  <Accordion title="避免魔法字" icon="wand-magic-sparkles">
+    **概念**：模型對「最高畫質」「Ultra HD」等詞反應不一，先測圖再決定是否保留。
+    
+    **快速檢查方法**：很多時是心理作用，實測有幫助再放。
+  </Accordion>
+  
+  <Accordion title="可調元素放 parameters" icon="gear">
+    **概念**：如果你想放進 Prompt 的東西是希望可以調整的，盡量就把他變成變數。
+    
+    **快速檢查方法**：一律放進 `parameters`（ex. `accessory_type`、`accessory_color`），方便後續調整。
+  </Accordion>
+</AccordionGroup>
+
+## 🚀 工具推薦｜PromptChef GPT｜JSON 圖像提示助手
+
+學完 JSON 提示詞結構後，如果還覺得「手動排版太花時間」或「怕漏掉關鍵欄位」，試試專門打造的 **PromptChef GPT｜JSON 圖像提示助手** 吧！
+
+### 核心功能
+
+<CardGroup cols={2}>
+  <Card title="一句靈感 → 完整 JSON" icon="lightbulb">
+    輸入一句描述，PromptChef 會即時產出含五大欄位的 JSON 草稿
+  </Card>
+  
+  <Card title="互動式提問補漏" icon="question">
+    自動偵測缺少資訊，用條列問題引導你勾選或輸入
+  </Card>
+  
+  <Card title="欄位說明表" icon="table">
+    輸出 JSON 的同時，附上「欄位可改什麼」的快速表格
+  </Card>
+  
+  <Card title="確認／迭代流程" icon="arrows-rotate">
+    先預覽 → 確認 ✅ 就收工；想調整 ❌ 就只問未滿足項
+  </Card>
+</CardGroup>
+
+### 建議使用時機
+
+<Tabs>
+  <Tab title="快速原型">
+    **靈光一閃，需要短時間內試 5 套風格／配色**
+    
+    - 測試不同配色方案
+    - 比較多種藝術風格
+    - 快速迭代設計概念
+  </Tab>
+  
+  <Tab title="團隊協作">
+    **設計師改配色、寫手改文案、工程改解析度**
+    
+    - 各管各的 parameters
+    - 互不衝突
+    - 統一格式標準
+  </Tab>
+  
+  <Tab title="教學示範">
+    **帶新手練習「配色 → 光線 → 構圖」的影響**
+    
+    - 一鍵換值即可比較效果
+    - 理解各參數的影響
+    - 學習結構化思維
+  </Tab>
+  
+  <Tab title="資產批量產出">
+    **遊戲角色卡、商品封面、社群貼圖**
+    
+    - 只要換 parameters 就能量產
+    - 保持風格一致性
+    - 提高工作效率
+  </Tab>
+</Tabs>
+
+### 基本操作流程
+
+<Steps>
+  <Step title="打開 PromptChef GPT">
+    在 GPT Store 搜尋名稱即可
+  </Step>
+  
+  <Step title="輸入概念描述">
+    不必一次寫很長，簡單描述即可
+  </Step>
+  
+  <Step title="回答 GPT 提問">
+    配色？尺寸？光線？—— 照需求填
+  </Step>
+  
+  <Step title="複製 JSON">
+    貼到你的 ChatGPT 就能用或是直接分享給他人
+  </Step>
+  
+  <Step title="想修改">
+    只改 parameters，30 秒重新出圖
+  </Step>
+</Steps>
+
+<Tip>
+**進階技巧**
+
+如果你已經有半成品 JSON，只要貼給 PromptChef，讓它幫你檢查逗號、引號、欄位順序，秒修好格式再繼續創作！
+</Tip>
+
+## 結尾
+
+以上就是「用 JSON 寫 GPT 圖像提示詞」的完整新手指南！試著把靈感拆成欄位、改用 `parameters` 玩配色跟光線，你會發現迭代速度大幅提升。
+
+<Note>
+**行動任務**
+
+立刻複製上方任意範例，先從換掉參數，貼到你的 ChatGPT 生成看看，接著就能開始慢慢修改，甚至客製屬於你的 JSON 模板了，感受 JSON 模板帶來的極速迭代魅力！
+</Note>
+
+## 下一步
+
+<CardGroup cols={2}>
+  <Card
+    title="常見實用案例"
+    icon="book-bookmark"
+    href="/ai-tools/chatgpt/practical-cases"
+  >
+    學習更多實際應用案例
+  </Card>
+  
+  <Card
+    title="創意生成案例"
+    icon="sparkles"
+    href="/ai-tools/chatgpt/creative-cases"
+  >
+    探索創意應用的可能性
+  </Card>
+</CardGroup>

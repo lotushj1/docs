@@ -27,7 +27,8 @@
             "group": "ChatGPT 圖片生成",
             "pages": [
               "ai-tools/chatgpt/basics",
-              "ai-tools/chatgpt/use-cases"
+              "ai-tools/chatgpt/use-cases",
+              "ai-tools/chatgpt/json-prompts"
             ]
           }
         ]
