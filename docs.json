@@ -24,7 +24,7 @@
         "tab": "AI 工具指南",
         "groups": [
           {
-            "group": "Nano Banana 圖片生成",
+            "group": "AI 圖片生成",
             "pages": [
               "ai-tools/chatgpt/basics",
               "ai-tools/chatgpt/use-cases",
