@@ -1,0 +1,20 @@
+{
+  "name": "mintlift-ai-handbook",
+  "version": "1.0.0",
+  "description": "Mintlift AI 手冊文檔",
+  "scripts": {
+    "dev": "mintlify dev",
+    "install:mintlify": "mintlify install",
+    "deploy": "sh deploy.sh",
+    "quick-push": "git add . && git commit -m 'docs: 快速更新' && git push origin main"
+  },
+  "keywords": [
+    "mintlify",
+    "documentation",
+    "ai",
+    "handbook"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
