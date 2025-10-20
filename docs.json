@@ -58,17 +58,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "部署指南",
-        "groups": [
-          {
-            "group": "本地開發",
-            "pages": [
-              "development"
-            ]
-          }
-        ]
       }
     ],
     "global": {
