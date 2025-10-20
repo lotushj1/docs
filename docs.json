@@ -12,13 +12,8 @@
     "tabs": [
       {
         "tab": "AI 設計指南",
-        "groups": [
-          {
-            "group": "開始使用",
-            "pages": [
-              "introduction"
-            ]
-          }
+        "pages": [
+          "introduction"
         ]
       }
     ],
