@@ -11,50 +11,12 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "開始使用",
+        "tab": "AI 設計指南",
         "groups": [
           {
-            "group": "基礎觀念",
+            "group": "開始使用",
             "pages": [
-              "introduction",
-              "purpose",
-              "why-ai",
-              "tool-selection"
-            ]
-          },
-          {
-            "group": "快速開始",
-            "pages": [
-              "quickstart"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "AI 工具指南",
-        "groups": [
-          {
-            "group": "ChatGPT 圖片生成",
-            "pages": [
-              "ai-tools/chatgpt/basics",
-              "ai-tools/chatgpt/use-cases"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "設計應用",
-        "groups": [
-          {
-            "group": "應用場景",
-            "pages": [
-              "applications/graphic-design"
-            ]
-          },
-          {
-            "group": "實戰案例",
-            "pages": [
-              "applications/cases/overview"
+              "introduction"
             ]
           }
         ]
