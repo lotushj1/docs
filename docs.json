@@ -8,32 +8,36 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "AI 設計指南",
-        "pages": [
-          "introduction",
-          "purpose",
-          "why-ai",
-          "tool-selection",
-          "graphic-design"
-        ]
-      },
-      {
-        "tab": "AI 工具指南",
-        "groups": [
-          {
-            "group": "AI 圖片生成",
-            "pages": [
-              "ai-tools/chatgpt/basics",
-              "ai-tools/chatgpt/use-cases",
-              "ai-tools/chatgpt/json-prompts"
-            ]
-          }
-        ]
-      }
-    ],
+         "navigation": {
+           "tabs": [
+             {
+               "tab": "AI 設計指南",
+               "pages": [
+                 "introduction",
+                 "purpose",
+                 "why-ai",
+                 "tool-selection",
+                 "graphic-design"
+               ]
+             },
+             {
+               "tab": "AI 工具指南",
+               "groups": [
+                 {
+                   "group": "AI 圖片生成",
+                   "pages": [
+                     "ai-tools/chatgpt/basics",
+                     "ai-tools/chatgpt/use-cases",
+                     "ai-tools/chatgpt/json-prompts"
+                   ]
+                 }
+               ]
+             },
+             {
+               "tab": "設計輔助應用",
+               "pages": []
+             }
+           ],
     "global": {
       "anchors": [
         {
