@@ -20,19 +20,28 @@
                  "graphic-design"
                ]
              },
-             {
-               "tab": "AI 工具指南",
-               "groups": [
-                 {
-                   "group": "AI 圖片生成",
-                   "pages": [
-                     "ai-tools/chatgpt/basics",
-                     "ai-tools/chatgpt/use-cases",
-                     "ai-tools/chatgpt/json-prompts"
-                   ]
-                 }
-               ]
-             },
+            {
+              "tab": "AI 工具指南",
+              "groups": [
+                {
+                  "group": "AI 圖片生成",
+                  "pages": [
+                    "ai-tools/chatgpt/basics",
+                    "ai-tools/chatgpt/use-cases",
+                    "ai-tools/chatgpt/json-prompts"
+                  ]
+                },
+                {
+                  "group": "Nano Banana 完整攻略",
+                  "pages": [
+                    "ai-tools/nano-banana/getting-started",
+                    "ai-tools/nano-banana/core-features",
+                    "ai-tools/nano-banana/design-cases",
+                    "ai-tools/nano-banana/advanced-tips"
+                  ]
+                }
+              ]
+            },
             {
               "tab": "設計輔助應用",
               "pages": [
