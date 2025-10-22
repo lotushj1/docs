@@ -181,6 +181,189 @@ Nano Banana 的理解能力超強，你不需要寫很複雜的提示詞。用�
 - ❌ 專業術語
 </Tip>
 
+## Nano Banana 的基本功能
+
+### 1. 文字生成圖片
+
+最基本的功能就是用文字描述生成圖片。
+
+<Steps>
+  <Step title="描述你的需求">
+    用自然語言告訴 Nano Banana 你想要什麼圖片
+  </Step>
+  
+  <Step title="AI 理解並優化">
+    Nano Banana 會理解你的需求，並優化提示詞
+  </Step>
+  
+  <Step title="生成圖片">
+    後台的 Gemini 2.5 Flash Image Preview 引擎會生成圖片
+  </Step>
+  
+  <Step title="查看結果">
+    圖片會直接顯示，可以繼續對話調整
+  </Step>
+</Steps>
+
+**範例提示詞：**
+
+```
+請幫我生成一張產品攝影風格的圖片：
+一罐咖啡豆放在木質桌面上，旁邊有散落的咖啡豆，
+背景有柔和的自然光線，整體氛圍溫暖舒適
+```
+
+### 2. 圖片編輯功能
+
+Nano Banana 還可以編輯現有圖片（包括上傳的圖片或生成的圖片）。
+
+<Tabs>
+  <Tab title="局部修改">
+    選擇圖片的特定區域進行修改
+    
+    ```
+    請把這張圖片中的咖啡杯改成透明玻璃杯
+    ```
+  </Tab>
+  
+  <Tab title="添加元素">
+    在圖片中增加新的物件
+    
+    ```
+    在這張圖的右上角添加一些綠色植物
+    ```
+  </Tab>
+  
+  <Tab title="移除元素">
+    去除圖片中不需要的部分
+    
+    ```
+    請移除背景中的那個人
+    ```
+  </Tab>
+  
+  <Tab title="風格調整">
+    改變整體視覺風格
+    
+    ```
+    把這張照片轉換成水彩畫風格
+    ```
+  </Tab>
+</Tabs>
+
+### 3. 擴圖功能
+
+可以擴展圖片的邊界，生成原本沒有的區域。
+
+<Note>
+**使用場景**
+
+- 橫向圖片需要改成直向
+- 需要更多背景空間
+- 調整構圖比例
+- 製作不同尺寸版本
+</Note>
+
+## 核心概念理解
+
+### 提示詞的重要性
+
+<AccordionGroup>
+  <Accordion title="具體 vs 模糊" icon="magnifying-glass">
+    **❌ 模糊**
+    ```
+    一個美麗的風景
+    ```
+    
+    **✅ 具體**
+    ```
+    日落時分的海邊，柔和的橘色天空，
+    平靜的海面反射著夕陽，
+    前景有幾顆棕櫚樹的剪影
+    ```
+  </Accordion>
+  
+  <Accordion title="包含關鍵元素" icon="list">
+    好的提示詞應該包含：
+    - **主體**：圖片的主要內容
+    - **環境**：場景和背景
+    - **光線**：光線方向和氛圍
+    - **風格**：視覺風格和調性
+    - **視角**：拍攝角度
+    - **色彩**：主要色調
+  </Accordion>
+  
+  <Accordion title="使用參考詞彙" icon="book">
+    使用專業術語能得到更好的結果：
+    - **攝影術語**：淺景深、逆光、黃金時刻
+    - **設計風格**：極簡、復古、賽博龐克
+    - **藝術流派**：印象派、波普藝術
+    - **材質描述**：磨砂、光澤、透明
+  </Accordion>
+</AccordionGroup>
+
+### 尺寸與比例
+
+Nano Banana 支援生成不同比例的圖片：
+
+<CardGroup cols={3}>
+  <Card title="方形" icon="square">
+    **1:1 比例**
+    
+    適合：Instagram 貼文、頭像、圖示
+  </Card>
+  
+  <Card title="橫向" icon="rectangle-wide">
+    **16:9 或 4:3**
+    
+    適合：網站 Banner、YouTube 封面、簡報
+  </Card>
+  
+  <Card title="直向" icon="rectangle-vertical">
+    **9:16 或 3:4**
+    
+    適合：限時動態、Pinterest、手機螢幕
+  </Card>
+</CardGroup>
+
+**指定尺寸範例：**
+
+```
+請生成一張 1792x1024 的橫向圖片
+或
+請生成一張適合 Instagram 限時動態的直向圖片
+```
+
+## 使用限制與注意事項
+
+<Warning>
+**重要限制**
+
+1. **版權問題**
+   - 不能要求生成特定藝術家或攝影師的風格
+   - 不能生成知名品牌 Logo
+   - 避免使用受版權保護的角色
+
+2. **內容限制**
+   - 不能生成暴力、色情、政治敏感內容
+   - 不能生成真實人物的肖像
+   - 某些敏感詞彙會被過濾
+
+3. **技術限制**
+   - 文字生成容易出錯
+   - 複雜的手部細節可能不準確
+   - 極度詳細的要求可能無法完全實現
+</Warning>
+
+<Tip>
+**專業建議**
+
+- 先用 Nano Banana 生成基礎圖片
+- 再用專業軟體（Photoshop）進行精修
+- 保存好用的提示詞模板
+- 利用 Nano Banana 的對話特性持續優化
+</Tip>
+
 ## 與其他 AI 圖像工具的對比
 
 | 特性 | Nano Banana | Midjourney | DALL-E 3 | Stable Diffusion |
@@ -417,11 +600,11 @@ Nano Banana 的理解能力超強，你不需要寫很複雜的提示詞。用�
   </Card>
   
   <Card
-    title="AI 圖片生成基礎"
+    title="ChatGPT 圖片應用案例"
     icon="image"
-    href="/ai-tools/chatgpt/basics"
+    href="/ai-tools/chatgpt/use-cases"
   >
-    了解 AI 圖片生成的基本概念
+    查看 ChatGPT 圖片生成的實際應用
   </Card>
   
   <Card
