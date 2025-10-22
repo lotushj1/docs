@@ -33,9 +33,11 @@
                 {
                   "group": "Nano Banana 完整攻略",
                   "pages": [
-                    "ai-tools/nano-banana/getting-started",
+                    "ai-tools/nano-banana/quick-start",
+                    "ai-tools/nano-banana/features-concepts",
                     "ai-tools/nano-banana/core-features",
                     "ai-tools/nano-banana/design-cases",
+                    "ai-tools/nano-banana/learning-faq",
                     "ai-tools/nano-banana/advanced-tips"
                   ]
                 }
